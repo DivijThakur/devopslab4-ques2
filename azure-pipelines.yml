@@ -8,7 +8,7 @@ trigger:
 - main
 
 pool:
-  name: poolnew
+  name: COMP367-Windows
   demands:
   - msbuild
   - visualstudio
@@ -17,7 +17,7 @@ pool:
 variables:
   buildConfiguration: 'Release'
   solution: '**/*.sln'
-  artifactName: 'devOp-MVC-Agile-Lab3-Ex2'
+  artifactName: 'devopslab4-ques2'
 
 steps:
 - task: DotNetCoreCLI@2
@@ -53,5 +53,5 @@ steps:
   displayName: 'Publish build artifact'
   inputs:
     pathtoPublish: '$(Build.ArtifactStagingDirectory)/$(artifactName).zip'
-    artifactName: 'devOp-MVC-Agile-Lab3-Ex2'
+    artifactName: 'devopslab4-ques2'
     publishLocation: 'Container'
